@@ -1,0 +1,26 @@
+
+.c-icon {
+
+    &-toggle {
+        width: 44px;
+        height: 44px;
+        position: relative;
+
+        &__bar {
+            background: #999;
+            width: 16px;
+            height: 2px;
+            position: absolute;
+            top: calc(50% - 2px / 2);
+            left: calc(50% - 16px / 2);
+
+            &:first-child {
+                margin-top: -6px;
+            }
+
+            &:last-child {
+                margin-top: 6px;
+            }
+        }
+    }
+}

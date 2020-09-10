@@ -1,0 +1,65 @@
+
+.btn {
+    padding: 1em 1.5em;
+    font-size: .875rem;
+    font-weight: 700;
+    line-height: 1;
+
+    &-theme {
+        color: #fff;
+        background-color: $themeColor;
+        border-color: $themeColor;
+
+        &:hover {
+            color: #fff;
+            opacity: .75;
+        }
+    }
+
+    &-theme-outline {
+        color: $themeColor;
+        background-color: #fff;
+        border-color: $themeColor;
+
+        &:hover {
+            color: $themeColor;
+            opacity: .75;
+        }
+    }
+
+    &-cv {
+        color: #fff;
+        background-color: $btnCvColor;
+        border-color: $btnCvColor;
+
+        &:hover {
+            color: #fff;
+            opacity: .75;
+        }
+    }
+
+    &-sm {
+        padding: .75em 1.25em;
+        font-size: .75rem;
+        min-width: auto;
+    }
+
+    &-lg {
+        padding: 1.25em 2em;
+        font-size: 1rem;
+    }
+
+    &-solid {
+        border-bottom: 3px solid rgba(0, 0, 0, 0.25) !important;
+    }
+
+    &-text-shadow {
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+@media screen and (min-width: 768px) {
+
+    .btn-tel {
+        pointer-events: none;
+    }
+}

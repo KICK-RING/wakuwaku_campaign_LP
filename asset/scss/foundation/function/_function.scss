@@ -1,0 +1,13 @@
+
+/**
+ * サンプル
+**/
+@function half($value) {
+	@return $value / 2;
+}
+
+/*
+@function divided($value: 2) {
+    @return
+}
+*/

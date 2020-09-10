@@ -1,0 +1,10 @@
+$lazy-image-transition: $transition !default;
+
+.js-lazy-image {
+    opacity: 0;
+    transition: $lazy-image-transition;
+
+    &.is-visible {
+        opacity: 1;
+    }
+}

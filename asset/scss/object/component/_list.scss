@@ -1,0 +1,104 @@
+
+.c-list {
+
+    li {
+        padding-left: 1.5em;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &-dot {
+
+        li  {
+            padding-left: 1em;
+
+            &::before {
+                content: "";
+                border-radius: 50%;
+                background: $color-brand;
+                width: .5em;
+                height: .5em;
+                position: absolute;
+                top: calc((1em * #{$line-height-text} - .5em) / 2);
+                left: 0;
+            }
+        }
+    }
+
+    &-number {
+        counter-reset: i;
+
+        li {
+
+            &::before {
+                counter-increment: i;
+                content: counter(i)".";
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    &-number-circle {
+        counter-reset: i;
+
+        li {
+
+            &::before {
+                counter-increment: i;
+                content: counter(i);
+                border-radius: 50%;
+                background: $color-brand;
+                color: #fff;
+                font-size: .875em;
+                font-weight: 700;
+                text-align: center;
+                line-height: calc(1 * 1.5);
+                width: calc(1em * 1.5);
+                height: calc(1em * 1.5);
+                position: absolute;
+                top: calc((1em / .875 * #{$line-height-text} - 1em * 1.5) / 2);
+                left: 0;
+            }
+        }
+    }
+
+    &-check li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+    }
+
+    &-check-circle li::before {
+        content: "\f058";
+        color: $color-success;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+    }
+
+    &-minus-circle li::before {
+        content: "\f056";
+        color: $color-error;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+    }
+
+    &-circle li::before {
+        content: "\f111";
+        color: $color-success;
+        font-family: "Font Awesome 5 Free";
+        //font-weight: 700;
+    }
+
+    &-times li::before {
+        content: "\f00d";
+        color: $color-error;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 700;
+    }
+
+}

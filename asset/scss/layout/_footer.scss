@@ -1,0 +1,79 @@
+.l-footer {
+    background: #404040;
+    color: #fff;
+    padding: 30px 0;
+
+    &--aboutus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+          
+        &:before, 
+        &:after {
+            border-top: 1px solid #fff;
+            content: "";
+            width: 60px;
+        }
+
+        &:before {
+            margin-right: 8px;
+        }
+
+        &:after {
+            margin-left: 8px;
+        }
+    }
+
+    &--company {
+        margin: 20px 0 10px;
+        font-size: 0.9rem;
+    }
+
+    &--addr {
+        font-size: 0.9rem;
+    }
+
+    span {
+        color: $theme-color;
+        margin-right: 12px;
+    }
+
+    &--copyright {
+        background: #17161e;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: .85rem;
+    }
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .l-footer {
+        &--aboutus {
+            &:before, 
+            &:after {
+                width: 300px;
+            }
+    
+            &:before {
+            }
+    
+            &:after {
+            }
+        }
+    
+        &--company {
+            text-align: center;
+        }
+    
+        &--addr {
+            text-align: center;
+        }
+    
+        span {
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

@@ -1,0 +1,12 @@
+// main: ../../app.scss
+.p-container {
+    @include sp-container();
+    max-width: 600px;
+}
+@include media-breakpoint-up(lg) {
+    .p-container {
+        min-height: 0;
+        @include container();
+        max-width: $container;
+    }
+}

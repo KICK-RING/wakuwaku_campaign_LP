@@ -1,0 +1,281 @@
+// common
+$animation-duration:        .3s !default;
+$animation-timing-function: ease !default;
+$animation-delay:           0s !default;
+$animation-offset:          1rem !default;
+
+// zoom
+$animation-zoom-in-size:       .75 !default;
+
+// text-cover
+$animation-text-cover-duration: 1.2s !default;
+
+/**
+ * keyframes
+ * fade in
+**/
+@include keyframes(fade-in) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(fade-in-up) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, $animation-offset, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@include keyframes(fade-in-down) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -$animation-offset, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@include keyframes(fade-in-left) {
+    0% {
+        opacity: 0;
+        transform: translate3d(-$animation-offset, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@include keyframes(fade-in-right) {
+    0% {
+        opacity: 0;
+        transform: translate3d($animation-offset, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**
+ * keyframes
+ * zoom in
+**/
+@include keyframes(zoom-in) {
+    0% {
+        opacity: 0;
+        transform: scale3d($animation-zoom-in-size, $animation-zoom-in-size, $animation-zoom-in-size);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@include keyframes(zoom-in-up) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, $animation-offset, 0) scale3d($animation-zoom-in-size, $animation-zoom-in-size, $animation-zoom-in-size);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}
+
+@include keyframes(zoom-in-down) {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -$animation-offset, 0) scale3d($animation-zoom-in-size, $animation-zoom-in-size, $animation-zoom-in-size);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}
+
+@include keyframes(zoom-in-left) {
+    0% {
+        opacity: 0;
+        transform: translate3d(-$animation-offset, 0, 0) scale3d($animation-zoom-in-size, $animation-zoom-in-size, $animation-zoom-in-size);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}
+
+@include keyframes(zoom-in-right) {
+    0% {
+        opacity: 0;
+        transform: translate3d($animation-offset, 0, 0) scale3d($animation-zoom-in-size, $animation-zoom-in-size, $animation-zoom-in-size);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+}
+
+/**
+ * keyframes
+ * text cover
+**/
+@include keyframes(text-cover-text) {
+    0% {
+        color: transparent;
+    }
+    49% {
+        color: transparent;
+    }
+    50% {
+        color: inherit;
+    }
+    100% {
+        color: inherit;
+    }
+}
+@include keyframes(text-cover) {
+    0% {
+        width: 0%;
+        left: 0;
+        right: auto;
+    }
+    30% {
+        width: 100%;
+        left: 0;
+        right: auto;
+    }
+    70% {
+        width: 100%;
+        left: auto;
+        right: 0;
+    }
+    100% {
+        width: 0%;
+        left: auto;
+        right: 0;
+    }
+}
+
+
+/**
+ * CSS
+**/
+.c-anim {
+
+    &--fade-in,
+    &--fade-in-up,
+    &--fade-in-down,
+    &--fade-in-left,
+    &--fade-in-right,
+    &--zoom-in,
+    &--zoom-in-up,
+    &--zoom-in-down,
+    &--zoom-in-left,
+    &--zoom-in-right {
+        opacity: 0;
+    }
+
+    /**
+     * fade in
+    **/
+    &--fade-in.is-visible {
+        @include animation(fade-in $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--fade-in-up.is-visible {
+        @include animation(fade-in-up $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--fade-in-down.is-visible {
+        @include animation(fade-in-down $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--fade-in-left.is-visible {
+        @include animation(fade-in-left $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--fade-in-right.is-visible {
+        @include animation(fade-in-right $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    /**
+     * fade in
+    **/
+    &--zoom-in.is-visible {
+        @include animation(zoom-in $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--zoom-in-up.is-visible {
+        @include animation(zoom-in-up $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--zoom-in-down.is-visible {
+        @include animation(zoom-in-down $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--zoom-in-left.is-visible {
+        @include animation(zoom-in-left $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    &--zoom-in-right.is-visible {
+        @include animation(zoom-in-right $animation-duration $animation-timing-function $animation-delay);
+    }
+
+    /**
+     * text-cover
+    **/
+    &--text-cover,
+    &--text-cover-black,
+    &--text-cover-white {
+        padding-left: .25em;
+        padding-right: .25em;
+        line-height: 1.25;
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    &--text-cover.is-hidden,
+    &--text-cover-black.is-hidden,
+    &--text-cover-white.is-hidden {
+        color: transparent;
+    }
+
+    &--text-cover-black::before {
+        background: #000;
+    }
+
+    &--text-cover-white::before {
+        background: #fff;
+    }
+
+    &--text-cover.is-visible,
+    &--text-cover-black.is-visible,
+    &--text-cover-white.is-visible {
+        @include animation(text-cover-text $animation-text-cover-duration $animation-timing-function $animation-delay);
+    }
+
+    &--text-cover.is-visible::before,
+    &--text-cover-black.is-visible::before,
+    &--text-cover-white.is-visible::before {
+        @include animation(text-cover $animation-text-cover-duration $animation-timing-function $animation-delay);
+    }
+}

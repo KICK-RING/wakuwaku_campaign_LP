@@ -1,0 +1,15 @@
+.p-ttl {
+    font-size: 1.75rem;
+    font-weight: 900;
+    font-family: $theme-font-family;
+}
+
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-ttl {
+        font-size: 2.5rem;
+    }
+}
+@include media-breakpoint-up(xl) {
+}

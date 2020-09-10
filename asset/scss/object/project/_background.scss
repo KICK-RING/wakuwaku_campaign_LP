@@ -1,0 +1,77 @@
+.p-background {
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    */
+
+    position: absolute;
+
+    &__light {
+        background: url(../img/background-light_2.jpg) 50% 50% / cover no-repeat;
+        opacity: .1;
+        position: absolute;
+        top: -5rem;
+        bottom: -5rem;
+        left: -5rem;
+        right: -5rem;
+        transform: scale(1.2);
+
+        position: fixed;
+    }
+
+    &__frame {
+        border: 1px solid rgba(#fff, .25);
+        position: fixed;
+        top: .75rem;
+        bottom: .75rem;
+        left: .75rem;
+        right: .75rem;
+    }
+
+    &__logo {
+        //width: 32%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        transition: .5s ease-out;
+    }
+
+    &__logo svg {
+        width: 32%;
+        opacity: .1;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .p-background {
+
+        &__frame {
+            top: 1.5rem;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            right: 1.5rem;
+        }
+
+        &__logo {
+            //width: 24%;
+        }
+
+        &__logo svg {
+
+            width: 24%;
+        }
+    }
+}

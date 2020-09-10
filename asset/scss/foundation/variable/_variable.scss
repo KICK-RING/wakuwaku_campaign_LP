@@ -1,0 +1,26 @@
+// main: ../../app.scss
+
+/**
+ * Theme Settings
+**/
+
+$theme-font-family: 'Noto Sans JP', sans-serif;
+$theme-font-weight: 400;
+$theme-font-letter-spacing: .1em;
+
+$theme-color: #f15c66;
+$default-font-color: #7d7e7e;
+$yellow: #fae50c;
+$orange: #f8ae23;
+$theme-sub-color: #fcdcdb;
+$border-color: #dbdbdb;
+$theme-bg-color: #f6f6f6;
+
+
+//$theme-gradation: linear-gradient(45deg, rgb(248, 188, 79) 0%,rgb(211, 21, 87) 100%);
+
+$transition: .3s;
+$opacity: .7;
+
+$sp-container: 90%;
+$container: 980px;

@@ -1,0 +1,12 @@
+
+.u-link-tel {
+}
+
+@include media-breakpoint-up(md) {
+
+    .u-link-tel {
+        pointer-events: none !important;
+    }
+}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

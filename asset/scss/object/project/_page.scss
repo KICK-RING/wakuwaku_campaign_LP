@@ -1,0 +1,21 @@
+// main: ../../app.scss
+
+.p-page {
+    &__conts {
+        width: $sp-container;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .p-page {
+        &__conts {
+            width: $container;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {}

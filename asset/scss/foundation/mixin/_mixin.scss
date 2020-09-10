@@ -1,0 +1,102 @@
+// main: ../../app.scss
+/**
+ * transition のデフォルト値
+**/
+@mixin transition($transition: $transition)
+{
+    transition: $transition;
+}
+
+/**
+ * 透過のデフォルト値
+**/
+@mixin opacity($opacity: $opacity)
+{
+    opacity: $opacity;
+}
+
+/**
+ * テーマのフォント
+**/
+@mixin theme-font()
+{
+    font-family:    $theme-font-family;
+    font-weight:    $theme-font-weight;
+    letter-spacing: $theme-font-letter-spacing;
+}
+
+/**
+ * keyframes()
+**/
+@mixin keyframes($animation-name)
+{
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+/**
+ * animation()
+**/
+@mixin animation($arg)
+{
+    -webkit-animation: $arg;
+    -moz-animation: $arg;
+    animation: $arg;
+
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+
+
+/**
+ * マウスオーバー時の透過
+**/
+@mixin hoverTransparent($transition: $transition, $opacity: $opacity) {
+    @include transition($transition);
+
+    &:hover {
+        @include opacity($opacity);
+    }
+}
+
+@mixin hoverUnderline(){
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+/**
+ * flex
+**/
+@mixin flex() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/**
+ * container
+**/
+@mixin sp-container() {
+    width: $sp-container;
+    margin: 0 auto;
+}
+
+@mixin container() {
+    width: $container;
+    margin: 0 auto;
+}

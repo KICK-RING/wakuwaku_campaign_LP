@@ -1,0 +1,2 @@
+
+$("hoge").toggleClass("hoge");

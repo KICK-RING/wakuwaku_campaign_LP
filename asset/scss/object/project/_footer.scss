@@ -1,0 +1,42 @@
+.p-footer {
+    padding: 3.5rem 0;
+    //background: #2d2d2d;
+    //border-top: 3px solid #ddd;
+    //position: relative;
+    //z-index: 1;
+
+    &__copyright {
+        @include theme-font;
+        font-size: .5rem;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: .25;
+    }
+}
+@include media-breakpoint-up(md) {
+    .p-footer {
+    }
+}
+@include media-breakpoint-up(lg) {
+    .p-footer {
+
+        &__copyright {
+            margin-left: 2.75rem;
+            //font-size: .75rem;
+            font-size: .625rem;
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            left: calc(-50% + .5em);
+            z-index: 0;
+            transform: rotate(-90deg);
+            opacity: .25;
+            pointer-events: none;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .p-footer {
+    }
+}

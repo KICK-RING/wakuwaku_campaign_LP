@@ -1,0 +1,76 @@
+@keyframes loading-bg {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.4);
+    }
+}
+
+.p-loading {
+    background: #171717;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+    visibility: visible;
+    @include transition(.5s);
+
+    .is-loaded & {
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.5s);
+    }
+
+    &__background {
+        //margin-top: 6rem;
+        display: flex;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__background::before,
+    &__background::after {
+        content: "";
+        margin-top: -1.25rem;
+        margin-left: -1.25rem;
+        border-radius: 50%;
+        background: #fff;
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: .1;
+        @include animation(loading-bg 1s ease-in-out infinite alternate);
+    }
+
+    &__background::after {
+        //opacity: .1;
+        //animation-timing-function: ease;
+        animation-delay: 1s;
+    }
+
+    /*
+    &__logo {
+        margin-bottom: 2rem;
+        width: 120px;
+    }
+    */
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

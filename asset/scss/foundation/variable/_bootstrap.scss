@@ -1,0 +1,288 @@
+/******************************
+ * Bootstrap Settings
+ *
+ * ブートストラップの設定上書き
+******************************/
+
+/**
+ * Color system
+ *
+ * bulma
+**/
+
+
+//$blue:    #007bff !default;
+//$indigo:  #6610f2 !default;
+//$purple:  #6f42c1 !default;
+//$pink:    #e83e8c !default;
+//$red:     #dc3545 !default;
+//$orange:  #fd7e14 !default;
+//$yellow:  #ffc107 !default;
+//$green:   #28a745 !default;
+//$teal:    #20c997 !default;
+//$cyan:    #17a2b8 !default;
+
+
+// bulma
+$blue:    hsl(217, 71%, 53%);
+$purple:  hsl(271, 100%, 71%);
+$red:     hsl(348, 86%, 61%);
+$orange:  hsl(14, 100%, 53%);
+$yellow:  hsl(48, 100%, 67%);
+$green:   hsl(141, 53%, 53%);
+$cyan:    hsl(204, 71%, 53%);
+
+
+
+//$primary:       $blue !default;
+$primary:       #fff;
+//$secondary:     $gray-600 !default;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-800 !default;
+
+
+/**
+ * Spacing
+**/
+
+//$spacer: 1rem !default;
+$spacer: 2rem;
+
+
+/**
+ * Body
+**/
+
+//$body-bg:                   $white !default;
+$body-bg:                   #070707;
+//$body-color:                $gray-900 !default;
+$body-color:                #fff;
+
+
+/**
+ * Links
+**/
+
+//$link-color:                theme-color("primary") !default;
+//$link-decoration:           none !default;
+//$link-hover-color:          darken($link-color, 15%) !default;
+//$link-hover-decoration:     underline !default;
+$link-hover-decoration:     none;
+
+/**
+ * Paragraphs
+**/
+
+//$paragraph-margin-bottom:   1rem !default;
+
+
+/**
+ * Grid breakpoints
+**/
+
+/*
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+*/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+);
+
+
+/**
+ * Grid containers
+**/
+
+/*
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+*/
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+
+/**
+ * Grid columns
+**/
+
+//$grid-columns:                12 !default;
+//$grid-gutter-width:           30px !default;
+$grid-gutter-width: 4.5rem;
+
+
+/**
+ * Components
+**/
+
+//$line-height-lg:              1.5 !default;
+//$line-height-sm:              1.5 !default;
+
+//$border-color:                $gray-300 !default;
+$border-color: #eee;
+
+//$border-radius:               .25rem !default;
+//$border-radius-lg:            .3rem !default;
+//$border-radius-sm:            .2rem !default;
+
+//$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-sm: 0 .125rem .25rem rgba(#000, .15);
+//$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow:    0 .25rem .5rem rgba(#000, .15);
+//$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow-lg: 0 .5rem 1rem rgba(#000, .15);
+
+//$transition-base:             all .2s ease-in-out !default;
+//$transition-fade:             opacity .15s linear !default;
+//$transition-collapse:         height .35s ease !default;
+
+
+/**
+ * Fonts
+**/
+
+//$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+//$font-family-base:            $font-family-sans-serif !default;
+
+//$font-size-base:              1rem !default;
+//$font-size-lg:                ($font-size-base * 1.25) !default;
+//$font-size-sm:                ($font-size-base * .875) !default;
+
+//$font-weight-light:           300 !default;
+//$font-weight-normal:          400 !default;
+//$font-weight-bold:            700 !default;
+
+//$font-weight-base:            $font-weight-normal !default;
+//$line-height-base:            1.5 !default;
+$line-height-base:            2;
+
+//$h1-font-size:                $font-size-base * 2.5 !default;
+//$h2-font-size:                $font-size-base * 2 !default;
+//$h3-font-size:                $font-size-base * 1.75 !default;
+//$h4-font-size:                $font-size-base * 1.5 !default;
+//$h5-font-size:                $font-size-base * 1.25 !default;
+//$h6-font-size:                $font-size-base !default;
+
+//$headings-margin-bottom:      ($spacer / 2) !default;
+//$headings-font-family:        inherit !default;
+//$headings-font-weight:        500 !default;
+$headings-font-weight:        700;
+//$headings-line-height:        1.2 !default;
+$headings-line-height:        1.5;
+//$headings-color:              inherit !default;
+
+//$display1-size:               6rem !default;
+//$display2-size:               5.5rem !default;
+//$display3-size:               4.5rem !default;
+//$display4-size:               3.5rem !default;
+
+//$display1-weight:             300 !default;
+//$display2-weight:             300 !default;
+//$display3-weight:             300 !default;
+//$display4-weight:             300 !default;
+//$display-line-height:         $headings-line-height !default;
+
+//$lead-font-size:              ($font-size-base * 1.25) !default;
+//$lead-font-weight:            300 !default;
+
+//$small-font-size:             80% !default;
+$small-font-size:             75%;
+
+//$text-muted:                  $gray-600 !default;
+
+
+/**
+ * Tables
+**/
+
+
+/**
+ * Buttons + Forms
+**/
+
+//$input-btn-padding-y:         .375rem !default;
+//$input-btn-padding-x:         .75rem !default;
+//$input-btn-line-height:       $line-height-base !default;
+
+//$input-btn-focus-width:       .2rem !default;
+//$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+//$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+//$input-btn-padding-y-sm:      .25rem !default;
+//$input-btn-padding-x-sm:      .5rem !default;
+//$input-btn-line-height-sm:    $line-height-sm !default;
+
+//$input-btn-padding-y-lg:      .5rem !default;
+//$input-btn-padding-x-lg:      1rem !default;
+//$input-btn-line-height-lg:    $line-height-lg !default;
+
+//$input-btn-border-width:      $border-width !default;
+
+
+/**
+ * Buttons
+**/
+
+//$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               1rem;
+//$btn-padding-x:               $input-btn-padding-x !default;
+$btn-padding-x:               2rem;
+//$btn-line-height:             $input-btn-line-height !default;
+$btn-line-height:             1;
+
+//$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-y-sm:            .75rem;
+//$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-padding-x-sm:            1rem;
+//$btn-line-height-sm:          $input-btn-line-height-sm !default;
+$btn-line-height-sm:          1;
+
+//$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-y-lg:            1.5rem;
+//$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-padding-x-lg:            2.25rem;
+//$btn-line-height-lg:          $input-btn-line-height-lg !default;
+$btn-line-height-lg:          1;
+
+//$btn-border-width:            $input-btn-border-width !default;
+
+//$btn-font-weight:             $font-weight-normal !default;
+//$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
+//$btn-focus-width:             $input-btn-focus-width !default;
+//$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
+//$btn-disabled-opacity:        .65 !default;
+//$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+//$btn-link-disabled-color:     $gray-600 !default;
+
+//$btn-block-spacing-y:         .5rem !default;
+
+//$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;

@@ -1,0 +1,469 @@
+$toggle-dot-size: 5px;
+$toggle-dot-distance: 10px;
+$toggle-dot-extend: 24px;
+
+$toggle-dot-close-height: 4px;
+$toggle-dot-close-width: 20px;
+
+$toggle-dot-transition: .5s;
+
+// $toggle-bar-width: 18px;
+// $toggle-bar-height: 3px;
+// $toggle-bar-distance: 10px;
+
+@keyframes headerNavOpen {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(0, 1.5rem, 0) scale(1.1);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+@keyframes headerNavClose {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(0, 1.5rem, 0) scale(1.1);
+    }
+}
+
+@keyframes nav-visible-dot-1 {
+    0% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1 - #{$toggle-dot-distance});
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    50% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1);
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    100% {
+        margin-left: calc(#{$toggle-dot-close-width} / 2 * -1);
+        width: $toggle-dot-close-width;
+        height: $toggle-dot-close-height;
+    }
+}
+@keyframes nav-hidden-dot-1 {
+    0% {
+        margin-left: calc(#{$toggle-dot-close-width} / 2 * -1);
+        width: $toggle-dot-close-width;
+        height: $toggle-dot-close-height;
+    }
+    50% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1);
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    100% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1 - #{$toggle-dot-distance});
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+}
+
+@keyframes nav-visible-dot-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes nav-hidden-dot-2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes nav-visible-dot-3 {
+    0% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1 + #{$toggle-dot-distance});
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    50% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1);
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    100% {
+        margin-left: calc(#{$toggle-dot-close-width} / 2 * -1);
+        width: $toggle-dot-close-width;
+        height: $toggle-dot-close-height;
+    }
+}
+@keyframes nav-hidden-dot-3 {
+    0% {
+        margin-left: calc(#{$toggle-dot-close-width} / 2 * -1);
+        width: $toggle-dot-close-width;
+        height: $toggle-dot-close-height;
+    }
+    50% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1);
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+    100% {
+        margin-left: calc(#{$toggle-dot-size} / 2 * -1 + #{$toggle-dot-distance});
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+    }
+}
+
+
+.p-header {
+    width: 100%;
+    position: absolute;
+
+    .container {
+        //padding: 0;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    &__logo {
+        margin-bottom: 0;
+        margin-right: 0;
+        padding: 0;
+        position: fixed;
+        top: 1.5rem;
+        //left: 1.5rem;
+        left: 1.25rem;
+        z-index: 11;
+        mix-blend-mode: difference;
+    }
+
+    &__logo-link {
+        line-height: 0;
+        display: block;
+        @include transition;
+    }
+
+    &__logo-link:hover {
+        @include opacity;
+    }
+
+    &__logo-link .p-logo {
+        height: 48px;
+        fill: #fff;
+    }
+
+    &__toggle {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        width: 44px;
+        height: 44px;
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 11;
+    }
+
+    &__toggle-dot {
+        margin-top: calc(#{$toggle-dot-size} / 2 * -1);
+        border-radius: $toggle-dot-size;
+        background: #fff;
+        display: block;
+        width: $toggle-dot-size;
+        height: $toggle-dot-size;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: $transition;
+
+        &.dot-1 {
+            margin-left: calc(#{$toggle-dot-size} / 2 * -1 - #{$toggle-dot-distance});
+            transform: rotate(45deg);
+
+            .is-nav-visible & {
+                @include animation(nav-visible-dot-1 $toggle-dot-transition);
+            }
+
+            .is-nav-hidden & {
+                @include animation(nav-hidden-dot-1 $toggle-dot-transition);
+            }
+        }
+
+        &.dot-2 {
+            margin-left: calc(#{$toggle-dot-size} / 2 * -1);
+
+            .is-nav-visible & {
+                @include animation(nav-visible-dot-2 $toggle-dot-transition);
+            }
+
+            .is-nav-hidden & {
+                @include animation(nav-hidden-dot-2 $toggle-dot-transition);
+            }
+        }
+
+        &.dot-3 {
+            margin-left: calc(#{$toggle-dot-size} / 2 * -1 + #{$toggle-dot-distance});
+            transform: rotate(-45deg);
+
+            .is-nav-visible & {
+                @include animation(nav-visible-dot-3 $toggle-dot-transition);
+            }
+
+            .is-nav-hidden & {
+                @include animation(nav-hidden-dot-3 $toggle-dot-transition);
+            }
+        }
+    }
+
+    /*
+    &__toggle-bar {
+        margin-top: calc(#{$toggle-bar-height} / 2 * -1);
+        margin-left: calc(#{$toggle-bar-width} / 2 * -1);
+        border-radius: #{$toggle-bar-height};
+        background: #fff;
+        display: block;
+        width: $toggle-bar-width;
+        height: #{$toggle-bar-height};
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: $transition;
+
+        &.bar-1 {
+            margin-top: calc(#{$toggle-bar-height} / 2 * -1 - #{$toggle-bar-distance} / 2);
+
+            .is-nav-visible & {
+                margin-top: calc(#{$toggle-bar-height} / 2 * -1);
+                transform: rotate(45deg);
+            }
+        }
+
+        &.bar-2 {
+            margin-top: calc(#{$toggle-bar-height} / 2 * -1 + #{$toggle-bar-distance} / 2);
+            transition-delay: calc(#{$transition} / 3);
+
+            .is-nav-visible & {
+                margin-top: calc(#{$toggle-bar-height} / 2 * -1);
+                transform: rotate(-45deg);
+            }
+        }
+
+        .is-nav-visible & {
+            //background: #000;
+        }
+    }
+    */
+
+    &__nav {
+        // ヘッダー固定部分を回避
+        padding-top: calc(1.5rem * 2 + 48px);
+        // フッター固定部分を回避
+        padding-bottom: calc(1.5rem * 2 + 10px);
+        background: #000;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        position: fixed;
+        top: 0;
+        bottom:  0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        //transform-origin: center;
+
+        .is-nav-visible & {
+            //animation: headerNavOpen .5s;
+            @include animation(headerNavOpen .5s);
+            animation-fill-mode: forwards;
+        }
+
+        .is-nav-hidden & {
+            //animation: headerNavClose .5s;
+            @include animation(headerNavClose .25s);
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &__nav-menu {
+        flex-basis: 100%;
+        overflow: scroll;
+    }
+
+    .nav-item {
+        margin: 0 auto;
+        //display: inline-block;
+        //width: 280px;
+        width: 270px;
+    }
+
+    .nav-item .nav-link {
+        padding: .5rem 2.5rem;
+        color: #fff;
+        @include theme-font;
+        font-size: 1.5rem;
+        letter-spacing: .2em;
+        position: relative;
+        opacity: 1;
+        @include transition(1s);
+    }
+
+    .nav-item .nav-link.is-current {
+        opacity: .5;
+    }
+
+    .nav-item .nav-link:hover,
+    .nav-item .nav-link:focus {
+        color: #fff;
+    }
+
+    .nav-item .nav-link span {
+        margin-right: .5rem;
+        font-size: .75rem;
+        letter-spacing: .2em;
+    }
+
+    &__social-link {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 1;
+        flex-direction: row;
+    }
+
+    &__social-link li {
+        margin-left: .375rem;
+        margin-right: .375rem;
+    }
+
+    &__social-link a {
+        color: inherit;
+        opacity: .25;
+    }
+}
+
+.is-nav-visible body {
+    overflow: hidden;
+}
+
+@include media-breakpoint-up(md) {
+    .p-header {
+    }
+}
+@include media-breakpoint-up(lg) {
+    .p-header {
+
+        .container-fluid {
+            padding: 0 3rem;
+        }
+
+        &__logo {
+            top:  3rem;
+            left: 3rem;
+        }
+
+        &__logo-link .p-logo {
+            height: 60px;
+        }
+
+        &__toggle {
+            display: none;
+        }
+
+        &__nav {
+            margin-top: calc(1.5rem + 1px + 1rem);
+            padding-top: 0;
+            padding-bottom: 0;
+            background: transparent;
+            position: static;
+            visibility: visible;
+            opacity: 1;
+
+            .is-nav-visible &,
+            .is-nav-hidden & {
+                animation: none;
+            }
+        }
+
+        &__nav-menu {
+            flex-basis: auto;
+        }
+
+        .nav-item {
+            width: auto;
+        }
+
+        .nav-item .nav-link {
+            padding: 1rem;
+            font-size: .875rem;
+            position: relative;
+        }
+
+        .nav-item .nav-link::before {
+            content: "";
+            background: #fff;
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: .75rem;
+            left: 50%;
+            @include transition;
+        }
+
+        .nav-item .nav-link:hover::before {
+            width: calc(100% - 1rem * 2);
+            left: 1rem;
+        }
+
+        .nav-item .nav-link span {
+            margin-left: 0;
+            margin-right: .25rem;
+            font-size: .625rem;
+        }
+
+        &__social-link {
+            margin-top: 0;
+            font-size: 1.25rem;
+            position: fixed;
+            //top: 3rem;
+            bottom: 2.75rem;
+            //right: 3rem;
+            left: 2.5rem;
+        }
+
+        &__social-link li {
+            margin-left: .5rem;
+            margin-right: 0;
+        }
+
+        &__social-link a {
+            @include transition;
+        }
+
+        &__social-link a:hover {
+            opacity: 1;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .p-header {
+
+        .container-fluid {
+            padding: 0 12rem;
+        }
+    }
+}

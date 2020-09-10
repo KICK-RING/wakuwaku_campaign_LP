@@ -1,0 +1,21 @@
+// main: ../../app.scss
+.u-br {
+    &__pc {
+        display: none;
+    }
+}
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .u-br {
+        &__sp {
+            display: none;
+        }
+        
+        &__pc {
+            display: block;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

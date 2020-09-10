@@ -1,0 +1,39 @@
+// main: ../../app.scss
+
+.u-media {
+    &__pc {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(md) {
+}
+@include media-breakpoint-up(lg) {
+    .u-media {
+        &__sp {
+            display: none;
+        }
+
+        &__pc {
+            display: block;
+
+            &-flex {
+                @include flex();
+            }
+
+            &-clearfix {
+                min-height: 1px;
+
+                &:after {
+                    content: " ";
+                    display: block;
+                    clear: both;
+                    height: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+}

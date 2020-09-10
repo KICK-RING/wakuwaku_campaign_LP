@@ -1,0 +1,210 @@
+// =======================================================
+// Foundation
+// =======================================================
+
+// ---------------------------------------------
+// variable
+// ---------------------------------------------
+
+@import "foundation/variable/animation";
+@import "foundation/variable/bootstrap";
+@import "foundation/variable/social-color";
+@import "foundation/variable/variable";
+
+// ---------------------------------------------
+// function
+// ---------------------------------------------
+
+//@import "foundation/function/function";
+
+// ---------------------------------------------
+// mixin
+// ---------------------------------------------
+
+@import "foundation/mixin/mixin";
+
+// ---------------------------------------------
+// vendor
+// ---------------------------------------------
+
+// reset or normalize
+@import "foundation/vendor/reset";
+//@import "foundation/vendor/normalize";
+
+// Bootstrap 4.1.3
+@import "foundation/vendor/bootstrap/functions";
+@import "foundation/vendor/bootstrap/variables";
+@import "foundation/vendor/bootstrap/mixins";
+// @import "foundation/vendor/bootstrap/root";
+// @import "foundation/vendor/bootstrap/reboot";
+// @import "foundation/vendor/bootstrap/type";
+// @import "foundation/vendor/bootstrap/images";
+// //@import "foundation/vendor/bootstrap/code";
+// @import "foundation/vendor/bootstrap/grid";
+// //@import "foundation/vendor/bootstrap/tables";
+@import "foundation/vendor/bootstrap/forms";
+// @import "foundation/vendor/bootstrap/buttons";
+// @import "foundation/vendor/bootstrap/transitions";
+// //@import "foundation/vendor/bootstrap/dropdown";
+// //@import "foundation/vendor/bootstrap/button-group";
+// //@import "foundation/vendor/bootstrap/input-group";
+// @import "foundation/vendor/bootstrap/custom-forms";
+// @import "foundation/vendor/bootstrap/nav";
+// @import "foundation/vendor/bootstrap/navbar";
+// //@import "foundation/vendor/bootstrap/card";
+// //@import "foundation/vendor/bootstrap/breadcrumb";
+// //@import "foundation/vendor/bootstrap/pagination";
+// @import "foundation/vendor/bootstrap/badge";
+// //@import "foundation/vendor/bootstrap/jumbotron";
+// //@import "foundation/vendor/bootstrap/alert";
+// //@import "foundation/vendor/bootstrap/progress";
+// @import "foundation/vendor/bootstrap/media";
+// @import "foundation/vendor/bootstrap/list-group";
+// //@import "foundation/vendor/bootstrap/close";
+// //@import "foundation/vendor/bootstrap/modal";
+// //@import "foundation/vendor/bootstrap/tooltip";
+// //@import "foundation/vendor/bootstrap/popover";
+// @import "foundation/vendor/bootstrap/carousel";
+// @import "foundation/vendor/bootstrap/utilities";
+// @import "foundation/vendor/bootstrap/print";
+
+// Font Awesome Free 5.11.2
+$fa-font-path: "../font/font-awesome/";
+@import "foundation/vendor/font-awesome/variables";
+@import "foundation/vendor/font-awesome/mixins";
+@import "foundation/vendor/font-awesome/path";
+@import "foundation/vendor/font-awesome/core";
+@import "foundation/vendor/font-awesome/larger";
+@import "foundation/vendor/font-awesome/fixed-width";
+@import "foundation/vendor/font-awesome/list";
+@import "foundation/vendor/font-awesome/bordered-pulled";
+@import "foundation/vendor/font-awesome/animated";
+@import "foundation/vendor/font-awesome/rotated-flipped";
+@import "foundation/vendor/font-awesome/stacked";
+@import "foundation/vendor/font-awesome/icons";
+@import "foundation/vendor/font-awesome/screen-reader";
+
+// Slick 1.8.1
+
+// $slick-font-path: "../font/slick/";
+// @import "foundation/vendor/slick/slick";
+// @import "foundation/vendor/slick/slick-theme";
+
+
+// featherlight 1.7.13
+/*
+@import "foundation/vendor/featherlight/featherlight";
+*/
+
+// ---------------------------------------------
+// vendor-extension
+// ---------------------------------------------
+
+// bootstrap
+//@import "foundation/vendor-extension/bootstrap";
+//@import "foundation/vendor-extension/bootstrap-buttons";
+
+// slick
+@import "foundation/vendor-extension/slick";
+
+// ---------------------------------------------
+// base
+// ---------------------------------------------
+
+@import "foundation/base/base";
+
+
+// =======================================================
+// Layout
+// =======================================================
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navi";
+
+@import "layout/main";
+@import "layout/aside";
+
+
+// =======================================================
+// Object
+// =======================================================
+
+// ---------------------------------------------
+// Component
+// ---------------------------------------------
+
+@import "object/component/animation";
+@import "object/component/form";
+//@import "object/component/icon";
+//@import "object/component/list";
+
+// ---------------------------------------------
+// Project
+// ---------------------------------------------
+
+// common
+// @import "object/project/loading";
+// @import "object/project/background";
+@import "object/project/container";
+@import "object/project/header";
+@import "object/project/footer";
+// @import "object/project/sound";
+// @import "object/project/animation";
+@import "object/project/page";
+@import "object/project/wp-pagination";
+@import "object/project/ttl";
+
+//
+@import "object/project/bootstrap";
+
+// block
+
+// page
+@import "object/project/page-home";
+
+@import "object/project/page-privacy-policy";
+
+// wordpress
+@import "object/project/wp-editor";
+
+// wordpress plugins
+@import "object/project/wp-plugin-wpcf7";
+
+
+// ---------------------------------------------
+// Utility
+// ---------------------------------------------
+@import "object/utility/br";
+
+// @import "object/utility/media";
+// @import "object/utility/embed";
+// @import "object/utility/lazy-image";
+// @import "object/utility/link";
+// @import "object/utility/marker";
+
+
+/**
+ * メディアクエリ
+**/
+// 通常のメディアクエリ
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}
+
+// 〜未満のメディアクエリ
+@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(lg) {}
+
+// 〜のみのメディアクエリ
+@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {}
+
+// 〜の間のメディアクエリ
+@include media-breakpoint-between(md, xl) {}

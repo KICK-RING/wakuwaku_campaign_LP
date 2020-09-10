@@ -1,0 +1,12 @@
+// main: ../../app.scss
+
+@include media-breakpoint-up(lg) {
+	.slick-slide {
+		transform: scale(.8);
+		transition: .7s;
+	}
+
+	.slick-current {
+		transform: scale(1);
+	}
+}
